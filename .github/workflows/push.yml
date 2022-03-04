@@ -17,5 +17,5 @@ jobs:
       - name: docker push
         run: |
           docker push \
-            -t ghcr.io/mark-ignacio/http2sqlite:latest \
-            -t ghcr.io/mark-ignacio/http2sqlite:${{ github.sha }}
+            ghcr.io/mark-ignacio/http2sqlite:latest \
+            ghcr.io/mark-ignacio/http2sqlite:${{ github.sha }}
