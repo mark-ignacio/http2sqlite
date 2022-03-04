@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker build
+        run: |
+          docker build . \
+            -t ghcr.io/mark-ignacio/http2sqlite:latest \
+            -t ghcr.io/mark-ignacio/http2sqlite:${{ github.sha }} \
+            --push
