@@ -17,6 +17,5 @@ jobs:
           DOCKER_BUILDKIT: 1
       - name: docker push
         run: |
-          docker push \
-            ghcr.io/mark-ignacio/http2sqlite:latest \
-            ghcr.io/mark-ignacio/http2sqlite:${{ github.sha }}
+          docker push ghcr.io/mark-ignacio/http2sqlite:latest
+          docker push ghcr.io/mark-ignacio/http2sqlite:${{ github.sha }}
