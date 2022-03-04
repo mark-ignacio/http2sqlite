@@ -13,3 +13,5 @@ jobs:
             -t ghcr.io/mark-ignacio/http2sqlite:latest \
             -t ghcr.io/mark-ignacio/http2sqlite:${{ github.sha }} \
             --push
+        env:
+          DOCKER_BUILDKIT: 1
